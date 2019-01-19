@@ -1,0 +1,14 @@
+{
+    "name": "danmrichards/go-for-php-developers",
+    "description": "A simple PHP REST API",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Dan Richards",
+            "email": "dan.m.richards@gmail.com"
+        }
+    ],
+    "require": {
+        "phroute/phroute": "^2.1"
+    }
+}

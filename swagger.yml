@@ -1,0 +1,27 @@
+swagger: "2.0"
+info:
+  description: "A simple REST API to say hello"
+  title: "Go for PHP Developers"
+  version: "1.0.0"
+schemes:
+- "http"
+paths:
+  /hello/{name}:
+    get:
+      summary: "Say hello"
+      tags:
+      - "API"
+      parameters:
+      - name: "name"
+        in: "path"
+        description: "What is your name?"
+        required: true
+        type: "string"
+      produces:
+      - "text/html"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            type: "string"
+            example: "Hello dan"
