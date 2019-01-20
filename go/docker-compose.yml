@@ -1,0 +1,14 @@
+version: '2'
+services:
+  golang:
+    build:
+      context: .
+      dockerfile: docker/go/Dockerfile
+  nginx:
+    depends_on:
+      - golang
+    build:
+      context: .
+      dockerfile: docker/nginx/Dockerfile
+    ports:
+      - "8080:80"

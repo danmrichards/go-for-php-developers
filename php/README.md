@@ -2,11 +2,11 @@
 This is a simple PHP REST API. It's intention is to be used in a benchmark against a Go application providing equivalent functionality.
 
 ## Usage
-The quickest way to get started is to use the PHP built in web server:
+A basic web stack with PHP-FPM and nginx is provided by Docker. To start the stack:
 ```bash
-$ php -S localhost:8080
+$ docker-compose up -d
 ```
-While this isn't the fastest web server out there, it's far beyond the scope of this exercise to setup nginx or similar.
+You can then access the API on localhost:8080
 
 ## API Specification
 See the swagger.yml at the root of the repo

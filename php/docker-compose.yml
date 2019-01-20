@@ -1,0 +1,21 @@
+version: '2'
+services:
+  composer:
+    image: composer
+    volumes:
+      - ./app:/app
+    command: install
+  fpm:
+    build:
+      context: .
+      dockerfile: docker/fpm/Dockerfile
+    volumes:
+      - ./app:/app
+  nginx:
+    depends_on:
+      - fpm
+    build:
+      context: .
+      dockerfile: docker/nginx/Dockerfile
+    ports:
+      - "8080:80"
