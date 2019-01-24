@@ -1,15 +1,16 @@
 GOARCH=amd64
 BINARY=hello
+GO111MODULE=on
 
 build: linux darwin windows
 
 linux:
-		CGO_ENABLED=0 GOOS=linux go build -o ./bin/${BINARY}-linux-${GOARCH} .
+		GO111MODULE=${GO111MODULE} CGO_ENABLED=0 GOARCH=${GOARCH} GOOS=linux go build -o ./bin/${BINARY}-linux-${GOARCH} .
 
 darwin:
-		CGO_ENABLED=0 GOOS=darwin go build -o ./bin/${BINARY}-darwin-${GOARCH} .
+		GO111MODULE=${GO111MODULE} CGO_ENABLED=0 GOARCH=${GOARCH} GOOS=darwin go build -o ./bin/${BINARY}-darwin-${GOARCH} .
 
 windows:
-		CGO_ENABLED=0 GOOS=windows go build -o ./bin/${BINARY}-windows-${GOARCH}.exe .
+		GO111MODULE=${GO111MODULE} CGO_ENABLED=0 GOARCH=${GOARCH} GOOS=windows go build -o ./bin/${BINARY}-windows-${GOARCH}.exe .
 
 .PHONY: build

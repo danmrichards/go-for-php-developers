@@ -2,6 +2,11 @@
 This is a simple Golang REST API. It's intention is to be used in a benchmark against a PHP application providing equivalent functionality.
 
 ## Usage
+First build the binary
+```bash
+$ make
+```
+
 A basic web stack with nginx is provided by Docker. To start the stack:
 ```bash
 $ docker-compose up -d
