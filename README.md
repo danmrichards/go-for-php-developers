@@ -11,10 +11,3 @@ but the PHP built in web-server is so slow that it would make the benchmark poin
 
 ## Usage
 See the README.md files in the go and php folders.
-
-## Benchmark Results
-Below are the benchmark results I see on my machine:
-
-```
-TBC
-```
